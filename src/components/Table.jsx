@@ -5,7 +5,6 @@ import TimerWithClock from "./TimerWithClock";
 
 const Table = ({ socket }) => {
   const i = useSelector((state) => state.timer);
-
   return (
     <div class="flex flex-col">
       <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">

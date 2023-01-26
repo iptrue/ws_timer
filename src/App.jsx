@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Room from "./components/Room";
 import socketIO from "socket.io-client";
-const socket = socketIO.connect("http://localhost:3001");
+console.log(process.env.REACT_APP_API_URL);
+const socket = socketIO.connect(`${process.env.REACT_APP_API_URL}`);
 function App() {
   return (
     <Router>
-      {/* Rest of the code remains same */}
       <Routes>
         <Route path="/" element={<Room socket={socket} />} />
       </Routes>
